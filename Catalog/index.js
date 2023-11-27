@@ -50,6 +50,26 @@ app.get("/books/item", async (req, res) => {
     }
 });
 
+app.put("/books/update/stock", async (req, res) => {
+    try {
+        let operation = req.headers["operation"];
+        let amount = req.headers["amount"];
+        let itemNumber = req.headers["booknumber"];
+        customLogger.myLog(`Updating item ${itemNumber} stock by ${operation} amount to ${amount}`);
+        let result = await knex("books").select().where("number", itemNumber);
+        if (result.length == 0) {
+            res.json({ "result": "No book found with this item number to update" });
+        }
+        let newVal = (operation == "increase") ? parseInt(result[0]["stock"]) + parseInt(amount) : parseInt(result[0]["stock"]) - parseInt(amount);
+        customLogger.myLog("The new value is: " + newVal);
+        await knex('books').update('stock', newVal).where("number", itemNumber);
+        customLogger.myLog("Updated successfully");
+        res.sendStatus(200);
+    } catch (error) {
+        res.status(500).send("Error processing your request on the server");
+    }
+});
+
 
 
 app.listen(process.env.PORT, () => {
