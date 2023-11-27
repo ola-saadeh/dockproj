@@ -25,7 +25,7 @@ app.post("/purchase/:itemnumber",async(req,res)=>{
 
     let itemNumber = req.params.itemnumber;
     let data = []
-    let d = {}
+    
     customLogger.myLog("new order to buy item: " + itemNumber)
    
     

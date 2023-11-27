@@ -2,3 +2,8 @@
 /FrontEnd/node_modules/
 /Order/node_modules/
 /node_modules/
+/Catalog/logs
+/FrontEnd/logs
+/Order/logs
+logs
+*.log
