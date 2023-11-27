@@ -4,7 +4,7 @@ services:
     container_name: express-ola-app-container 
     build: .
     volumes:
-      - ./src:/app/src:ro
+      - ./:/app/src:ro
     ports:
       - "4000:4000"
     environment:

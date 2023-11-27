@@ -2,7 +2,7 @@ version: '3'
 services:
   node-app:
     volumes:
-      - ./src:/app/src:ro
+      - ./:/app/src:ro
     environment:
       - NODE_ENV=development
     command: npm run start-dev
