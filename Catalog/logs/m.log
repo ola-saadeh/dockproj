@@ -46,3 +46,5 @@
 [INFO] 27-11-2023 08:38:44:150 ===> "Updating item 3 stock by decrease amount to 65"  ---  (Catalog\index.js:58) 
 [INFO] 27-11-2023 08:38:44:153 ===> "The new value is: 60"  ---  (Catalog\index.js:64) 
 [INFO] 27-11-2023 08:38:44:170 ===> "Updated successfully"  ---  (Catalog\index.js:66) 
+[INFO] 27-11-2023 09:23:21:499 ===> "Server is running on port 4000"  ---  (Catalog\index.js:94) 
+[INFO] 27-11-2023 09:25:33:662 ===> "Server is running on port 4000"  ---  (Catalog\index.js:94) 

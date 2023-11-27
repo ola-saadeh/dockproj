@@ -70,6 +70,24 @@ app.put("/books/update/stock", async (req, res) => {
     }
 });
 
+app.put("/books/update/cost", async (req, res) => {
+    try {
+        let newCost = parseInt(req.headers["newcost"]);
+        let itemNumber = req.headers["booknumber"];
+        let result = await knex("books").select().where("number", itemNumber);
+        if (result.length === 0) {
+            res.json({ "result": "No book found with this item number to update" });
+        }
+        customLogger.myLog(`Updating the book number ${itemNumber} cost to ${newCost}`);
+        await knex('books').update('cost', newCost).where("number", itemNumber);
+        customLogger.myLog("Updated successfully");
+        res.sendStatus(200);
+    } catch (error) {
+        res.status(500).send("Error processing your request on the server");
+    }
+});
+
+
 
 
 app.listen(process.env.PORT, () => {
