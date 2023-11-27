@@ -51,3 +51,4 @@
 [INFO] 27-11-2023 09:26:12:896 ===> "Server is running on port 4000"  ---  (Catalog\index.js:94) 
 [INFO] 27-11-2023 09:26:15:332 ===> "Updating the book number 3 cost to 123"  ---  (Catalog\index.js:81) 
 [INFO] 27-11-2023 09:26:15:342 ===> "Updated successfully"  ---  (Catalog\index.js:83) 
+[INFO] 27-11-2023 11:49:14:441 ===> "Server is running on port 4000"  ---  (Catalog\index.js:94) 

@@ -1,0 +1,117 @@
+[INFO] 27-11-2023 10:37:00:088 ===> "Server is running on port 5000"  ---  (Order\index.js:70) 
+[INFO] 27-11-2023 10:39:59:157 ===> "Server is running on port 5000"  ---  (Order\index.js:70) 
+---------------------------
+[ERROR] 27-11-2023 10:40:12:967 ===> 
+"Error processing the purchase request"  ---  (Order\index.js:64) getaddrinfo ENOTFOUND undefined 
+--------------------------
+[INFO] 27-11-2023 10:47:20:308 ===> "Server is running on port 5000"  ---  (Order\index.js:72) 
+[INFO] 27-11-2023 11:45:26:181 ===> "Server is running on port 5000"  ---  (Order\index.js:72) 
+---------------------------
+[ERROR] 27-11-2023 11:46:08:660 ===> 
+"Error processing the purchase request"  ---  (Order\index.js:66) getaddrinfo ENOTFOUND http 
+--------------------------
+[INFO] 27-11-2023 11:47:33:300 ===> "Server is running on port 5000"  ---  (Order\index.js:72) 
+---------------------------
+[ERROR] 27-11-2023 11:47:42:869 ===> 
+"Error processing the purchase request"  ---  (Order\index.js:66) getaddrinfo ENOTFOUND undefined 
+--------------------------
+[INFO] 27-11-2023 11:48:39:147 ===> "Server is running on port 5000"  ---  (Order\index.js:72) 
+---------------------------
+[ERROR] 27-11-2023 11:49:26:484 ===> 
+"Error processing the purchase request"  ---  (Order\index.js:66) getaddrinfo ENOTFOUND undefined 
+--------------------------
+[INFO] 27-11-2023 12:09:55:917 ===> "Server is running on port 5000"  ---  (Order\index.js:72) 
+---------------------------
+[ERROR] 27-11-2023 12:11:56:704 ===> 
+"Error processing the purchase request"  ---  (Order\index.js:66) getaddrinfo ENOTFOUND http 
+--------------------------
+[INFO] 27-11-2023 12:13:53:498 ===> "Server is running on port 5000"  ---  (Order\index.js:72) 
+---------------------------
+[ERROR] 27-11-2023 12:14:00:129 ===> 
+"Error processing the purchase request"  ---  (Order\index.js:66) connect ECONNREFUSED 192.168.1.1:4000 
+--------------------------
+[INFO] 27-11-2023 12:26:48:611 ===> "server is running on port 5000"  ---  (Order\index.js:70) 
+[INFO] 27-11-2023 12:29:42:798 ===> "new order to buy item: 4"  ---  (Order\index.js:29) 
+---------------------------
+[ERROR] 27-11-2023 12:29:50:083 ===> 
+"error in finding the item"  ---  (Order\index.js:65) 
+--------------------------
+[INFO] 27-11-2023 12:31:26:403 ===> "server is running on port 5000"  ---  (Order\index.js:70) 
+[INFO] 27-11-2023 12:31:29:450 ===> "new order to buy item: 4"  ---  (Order\index.js:29) 
+---------------------------
+[ERROR] 27-11-2023 12:31:36:753 ===> 
+"error in finding the item"  ---  (Order\index.js:65) 
+--------------------------
+[INFO] 27-11-2023 12:32:42:921 ===> "server is running on port 5000"  ---  (Order\index.js:70) 
+[INFO] 27-11-2023 12:32:44:250 ===> "new order to buy item: 4"  ---  (Order\index.js:29) 
+[INFO] 27-11-2023 12:32:44:251 ===> "http://http://localhost:"  ---  (Order\index.js:31) 
+---------------------------
+[ERROR] 27-11-2023 12:32:51:556 ===> 
+"error in finding the item"  ---  (Order\index.js:65) 
+--------------------------
+[INFO] 27-11-2023 12:33:35:649 ===> "server is running on port 5000"  ---  (Order\index.js:70) 
+[INFO] 27-11-2023 12:33:39:070 ===> "new order to buy item: 4"  ---  (Order\index.js:29) 
+[INFO] 27-11-2023 12:33:39:072 ===> "http://localhost:"  ---  (Order\index.js:31) 
+[INFO] 27-11-2023 12:33:39:143 ===> "item data is: [{\"number\":4,\"title\":\"Cooking for the Impatient Undergrad\",\"topic\":\"undergraduate school\",\"cost\":15,\"stock\":120}]"  ---  (Order\index.js:34) 
+[INFO] 27-11-2023 12:33:39:145 ===> 119  ---  (Order\index.js:42) 
+[INFO] 27-11-2023 12:33:39:146 ===> 120  ---  (Order\index.js:43) 
+[INFO] 27-11-2023 12:33:39:212 ===> "update the stock of the item"  ---  (Order\index.js:53) 
+[INFO] 27-11-2023 12:33:39:237 ===> "result of update: OK"  ---  (Order\index.js:55) 
+[INFO] 27-11-2023 12:36:24:282 ===> "new order to buy item: 4"  ---  (Order\index.js:29) 
+[INFO] 27-11-2023 12:36:24:284 ===> "http://localhost:"  ---  (Order\index.js:31) 
+[INFO] 27-11-2023 12:36:24:296 ===> "item data is: [{\"number\":4,\"title\":\"Cooking for the Impatient Undergrad\",\"topic\":\"undergraduate school\",\"cost\":15,\"stock\":118}]"  ---  (Order\index.js:34) 
+[INFO] 27-11-2023 12:36:24:299 ===> 117  ---  (Order\index.js:42) 
+[INFO] 27-11-2023 12:36:24:300 ===> 118  ---  (Order\index.js:43) 
+[INFO] 27-11-2023 12:36:24:343 ===> "update the stock of the item"  ---  (Order\index.js:53) 
+[INFO] 27-11-2023 12:36:24:351 ===> "result of update: OK"  ---  (Order\index.js:55) 
+[INFO] 27-11-2023 12:37:34:734 ===> "server is running on port 5000"  ---  (Order\index.js:70) 
+[INFO] 27-11-2023 12:37:39:878 ===> "new order to buy item: 4"  ---  (Order\index.js:29) 
+[INFO] 27-11-2023 12:37:39:940 ===> "item data is: [{\"number\":4,\"title\":\"Cooking for the Impatient Undergrad\",\"topic\":\"undergraduate school\",\"cost\":15,\"stock\":116}]"  ---  (Order\index.js:34) 
+[INFO] 27-11-2023 12:37:39:943 ===> 115  ---  (Order\index.js:42) 
+[INFO] 27-11-2023 12:37:39:945 ===> 116  ---  (Order\index.js:43) 
+[INFO] 27-11-2023 12:42:24:419 ===> "server is running on port 5000"  ---  (Order\index.js:69) 
+[INFO] 27-11-2023 12:42:27:902 ===> "new order to buy item: 4"  ---  (Order\index.js:29) 
+[INFO] 27-11-2023 12:42:27:961 ===> "item data is: [{\"number\":4,\"title\":\"Cooking for the Impatient Undergrad\",\"topic\":\"undergraduate school\",\"cost\":15,\"stock\":115}]"  ---  (Order\index.js:34) 
+[INFO] 27-11-2023 12:42:27:963 ===> 114  ---  (Order\index.js:42) 
+[INFO] 27-11-2023 12:42:27:964 ===> 115  ---  (Order\index.js:43) 
+[INFO] 27-11-2023 12:42:27:985 ===> "update the stock of the item"  ---  (Order\index.js:52) 
+[INFO] 27-11-2023 12:42:28:000 ===> "result of update: OK"  ---  (Order\index.js:54) 
+[INFO] 27-11-2023 12:42:36:557 ===> "new order to buy item: 4"  ---  (Order\index.js:29) 
+[INFO] 27-11-2023 12:42:36:565 ===> "item data is: [{\"number\":4,\"title\":\"Cooking for the Impatient Undergrad\",\"topic\":\"undergraduate school\",\"cost\":15,\"stock\":114}]"  ---  (Order\index.js:34) 
+[INFO] 27-11-2023 12:42:36:566 ===> 113  ---  (Order\index.js:42) 
+[INFO] 27-11-2023 12:42:36:567 ===> 114  ---  (Order\index.js:43) 
+[INFO] 27-11-2023 12:42:36:588 ===> "update the stock of the item"  ---  (Order\index.js:52) 
+[INFO] 27-11-2023 12:42:36:596 ===> "result of update: OK"  ---  (Order\index.js:54) 
+[INFO] 27-11-2023 12:52:10:370 ===> "server is running on port 5000"  ---  (Order\index.js:69) 
+[INFO] 27-11-2023 12:52:13:683 ===> "new order to buy item: 4"  ---  (Order\index.js:29) 
+[INFO] 27-11-2023 12:52:13:744 ===> "item data is: [{\"number\":4,\"title\":\"Cooking for the Impatient Undergrad\",\"topic\":\"undergraduate school\",\"cost\":15,\"stock\":113}]"  ---  (Order\index.js:34) 
+[INFO] 27-11-2023 12:52:13:746 ===> 112  ---  (Order\index.js:42) 
+[INFO] 27-11-2023 12:52:13:748 ===> 113  ---  (Order\index.js:43) 
+[INFO] 27-11-2023 12:52:13:767 ===> "update the stock of the item"  ---  (Order\index.js:52) 
+[INFO] 27-11-2023 12:52:13:784 ===> "result of update: OK"  ---  (Order\index.js:54) 
+[INFO] 27-11-2023 12:53:56:132 ===> "server is running on port 5000"  ---  (Order\index.js:69) 
+[INFO] 27-11-2023 12:54:25:547 ===> "new order to buy item: 4"  ---  (Order\index.js:29) 
+[INFO] 27-11-2023 12:54:25:603 ===> "item data is: [{\"number\":4,\"title\":\"Cooking for the Impatient Undergrad\",\"topic\":\"undergraduate school\",\"cost\":15,\"stock\":112}]"  ---  (Order\index.js:34) 
+[INFO] 27-11-2023 12:54:25:605 ===> null  ---  (Order\index.js:42) 
+[INFO] 27-11-2023 12:54:25:623 ===> "update the stock of the item"  ---  (Order\index.js:52) 
+[INFO] 27-11-2023 12:54:25:638 ===> "result of update: OK"  ---  (Order\index.js:54) 
+[INFO] 27-11-2023 12:56:20:217 ===> "server is running on port 5000"  ---  (Order\index.js:73) 
+[INFO] 27-11-2023 12:56:20:929 ===> "new order to buy item: 4"  ---  (Order\index.js:29) 
+[INFO] 27-11-2023 12:56:20:988 ===> "item data is: [{\"number\":4,\"title\":\"Cooking for the Impatient Undergrad\",\"topic\":\"undergraduate school\",\"cost\":15,\"stock\":111}]"  ---  (Order\index.js:34) 
+[INFO] 27-11-2023 12:56:20:989 ===> "the number of books is now "  ---  (Order\index.js:42) 
+[INFO] 27-11-2023 12:56:20:990 ===> 111  ---  (Order\index.js:43) 
+[INFO] 27-11-2023 12:56:20:991 ===> "and its decrease to "  ---  (Order\index.js:45) 
+[INFO] 27-11-2023 12:56:20:991 ===> 110  ---  (Order\index.js:46) 
+[INFO] 27-11-2023 12:56:21:018 ===> "update the stock of the item"  ---  (Order\index.js:56) 
+[INFO] 27-11-2023 12:56:21:035 ===> "result of update: OK"  ---  (Order\index.js:58) 
+[INFO] 27-11-2023 12:57:16:131 ===> "server is running on port 5000"  ---  (Order\index.js:70) 
+[INFO] 27-11-2023 12:57:21:007 ===> "new order to buy item: 4"  ---  (Order\index.js:29) 
+[INFO] 27-11-2023 12:57:21:061 ===> "item data is: [{\"number\":4,\"title\":\"Cooking for the Impatient Undergrad\",\"topic\":\"undergraduate school\",\"cost\":15,\"stock\":110}]"  ---  (Order\index.js:34) 
+[INFO] 27-11-2023 12:57:21:063 ===> "the number of books is now 110and its decrease to 109"  ---  (Order\index.js:42) 
+[INFO] 27-11-2023 12:57:21:082 ===> "update the stock of the item"  ---  (Order\index.js:53) 
+[INFO] 27-11-2023 12:57:21:098 ===> "result of update: OK"  ---  (Order\index.js:55) 
+[INFO] 27-11-2023 12:57:40:012 ===> "new order to buy item: 4"  ---  (Order\index.js:29) 
+[INFO] 27-11-2023 12:57:40:023 ===> "item data is: [{\"number\":4,\"title\":\"Cooking for the Impatient Undergrad\",\"topic\":\"undergraduate school\",\"cost\":15,\"stock\":109}]"  ---  (Order\index.js:34) 
+[INFO] 27-11-2023 12:57:40:025 ===> "the number of books is now 109and its decrease to 108"  ---  (Order\index.js:42) 
+[INFO] 27-11-2023 12:57:40:042 ===> "update the stock of the item"  ---  (Order\index.js:53) 
+[INFO] 27-11-2023 12:57:40:049 ===> "result of update: OK"  ---  (Order\index.js:55) 
