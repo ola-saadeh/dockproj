@@ -34,3 +34,24 @@ app.get("/books/subject", async (req, res) => {
         res.status(500).send("Error processing your request on the server");
     }
 });
+
+app.get("/books/item", async (req, res) => {
+    try {
+        let itemNumber = req.headers["booknumber"];
+        customLogger.myLog("Searching for the book with item number: " + itemNumber);
+        let result = await knex("books").select().where("number", itemNumber);
+        if (result.length === 0) {
+            res.json({ "result": "No book found with this item number" });
+        }
+        customLogger.myLog("The result is: " + JSON.stringify(result));
+        res.json(result);
+    } catch (error) {
+        res.status(500).send("Error processing your request on the server");
+    }
+});
+
+
+
+app.listen(process.env.PORT, () => {
+    customLogger.myLog(`Server is running on port ${process.env.PORT}`);
+});
