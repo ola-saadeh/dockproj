@@ -13,3 +13,8 @@
 [INFO] 27-11-2023 07:15:26:823 ===> "Searching for books with subject: undefined"  ---  (Catalog\index.js:26) 
 [INFO] 27-11-2023 07:17:31:231 ===> "Searching for books with subject: undefined"  ---  (Catalog\index.js:26) 
 [INFO] 27-11-2023 07:19:04:356 ===> "Searching for books with subject: undefined"  ---  (Catalog\index.js:26) 
+[INFO] 27-11-2023 07:19:55:105 ===> "Server is running on port 4000"  ---  (Catalog\index.js:91) 
+[INFO] 27-11-2023 07:20:01:277 ===> "Searching for books with subject: distributed systems"  ---  (Catalog\index.js:26) 
+[INFO] 27-11-2023 07:20:01:300 ===> "The result is: [{\"number\":2,\"title\":\"RPCs for Noobs\",\"topic\":\"distributed systems\",\"cost\":25,\"stock\":200}]"  ---  (Catalog\index.js:31) 
+[INFO] 27-11-2023 08:06:50:217 ===> "Searching for books with subject: distributed systems"  ---  (Catalog\index.js:26) 
+[INFO] 27-11-2023 08:06:50:220 ===> "The result is: [{\"number\":1,\"title\":\"How to get a good grade in DOS in 40 minutes a day\",\"topic\":\"distributed systems\",\"cost\":30,\"stock\":90},{\"number\":2,\"title\":\"RPCs for Noobs\",\"topic\":\"distributed systems\",\"cost\":25,\"stock\":200}]"  ---  (Catalog\index.js:31) 
