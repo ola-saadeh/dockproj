@@ -95,9 +95,9 @@ app.post("/purchase/:itemnumber",async(req,res)=>{
            res.send(ress.data)
         })
         .catch( (error) =>{
-            customLogger.myError("there is an error accour in the server")
+            customLogger.myError("Error processing your request on the server")
             customLogger.myError(error.stack)  
-            res.status(500).send("error parsing your req. in server")
+            res.status(500).send("Error processing your request on the server")
         })
 })
 
