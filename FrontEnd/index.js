@@ -82,6 +82,25 @@ app.get("/info",cashMid,(req,res)=>{
         })
 })
 
+app.post("/purchase/:itemnumber",async(req,res)=>{
+    customLogger.myLog("*************************************")
+    let itemNumber = req.params.itemnumber
+   
+    customLogger.myLog("Start a purchase order for the book with number:  " + itemNumber)
+    customLogger.myLog("Order processing on the server:    " + orderIP )
+    axios.post(orderIP +'/purchase/'+itemNumber)
+        .then((ress)=> {
+            collection.clear();
+            customLogger.myLog("Successful payment for the selected item.")
+           res.send(ress.data)
+        })
+        .catch( (error) =>{
+            customLogger.myError("there is an error accour in the server")
+            customLogger.myError(error.stack)  
+            res.status(500).send("error parsing your req. in server")
+        })
+})
+
 app.listen(process.env.PORT, ()=>{
     customLogger.myLog(`server is running on port ${process.env.PORT}`);
   });
