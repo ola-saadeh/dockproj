@@ -107,10 +107,12 @@ app.post("/purchase/:itemnumber",async(req,res)=>{
     let itemNumber = req.params.itemnumber
    
     customLogger.myLog("Start a purchase order for the book with number:  " + itemNumber)
-    customLogger.myLog("Order processing on the server:    " + orderIP )
-    axios.post(orderIP +'/purchase/'+itemNumber)
+    customLogger.myLog("Order processing on the server:    " + oreder_IP[orderServerIndex] )
+    axios.post(oreder_IP[orderServerIndex]+'/purchase/'+itemNumber)
         .then((ress)=> {
             collection.clear();
+            orderServerIndex = (orderServerIndex + 1) % oreder_IP.length;
+
             customLogger.myLog("Successful payment for the selected item.")
            res.send(ress.data)
         })
