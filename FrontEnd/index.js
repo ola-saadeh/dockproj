@@ -3,11 +3,17 @@ const path = require("path")
 const cors = require('cors');
 const app = express() ;
 const axios = require("axios");
-const myIP = "http://" + process.env.HOST +":"
+const cat_IP = ["http://" + process.env.First +":4000","http://" + process.env.Second +":4000"]
+const oreder_IP = ["http://" + process.env.First +":5000","http://" + process.env.Second +":5000"]
+
+ 
 let catlogIP = "http://localhost:4000";
 let orderIP = "http://localhost:5000";
 console.log(process.env.HOST)
  
+let orderServerIndex = 0;
+let catalogServerIndex = 0;
+
 require('dotenv').config()
 app.use(cors());
 app.use(express.json());
