@@ -237,3 +237,8 @@
 [INFO] 31-12-2023 05:30:07:677 ===> "server is running on port 5000"  ---  (Order\index.js:81) 
 [INFO] 31-12-2023 05:30:12:735 ===> "server is running on port 5000"  ---  (Order\index.js:81) 
 [INFO] 31-12-2023 05:30:14:145 ===> "server is running on port 5000"  ---  (Order\index.js:81) 
+[INFO] 31-12-2023 07:48:37:867 ===> "new order to buy item: 7"  ---  (Order\index.js:38) 
+[INFO] 31-12-2023 07:48:37:947 ===> "item data is: [{\"number\":7,\"title\":\"Spring in the Pioneer Valley\",\"topic\":\"LAB2\",\"cost\":24,\"stock\":45}]"  ---  (Order\index.js:43) 
+[INFO] 31-12-2023 07:48:37:949 ===> "the number of books is now 45 and its decreased to 44"  ---  (Order\index.js:51) 
+[INFO] 31-12-2023 07:48:38:038 ===> "update the stock of the item"  ---  (Order\index.js:64) 
+[INFO] 31-12-2023 07:48:38:061 ===> "result of update: OK"  ---  (Order\index.js:66) 

@@ -76,7 +76,7 @@ app.get("/search",cashMid,(req,res)=>{
         })
 })
 
-app.get("/info",cashMid,(req,res)=>{
+app.get("/info",cashMid,(req,res)=>{ 
     let booknumber = req.headers["booknumber"]
     customLogger.myLog("Querying books related to the book number : " + booknumber);
     customLogger.myLog("Exploring on server : " + cat_IP[catalogServerIndex]);
