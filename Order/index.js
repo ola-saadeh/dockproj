@@ -1,11 +1,15 @@
 const express = require('express');
 const path = require("path")
-const cors = require('cors');
+
 const app = express() ;
-require('dotenv').config()
+const axios = require("axios")
+
+const cors = require('cors');
 app.use(cors());
 app.use(express.json());
-const axios = require("axios")
+require('dotenv').config()
+
+
 const knex = require("knex")({
     client: "sqlite",
     connection: {
@@ -15,11 +19,14 @@ const knex = require("knex")({
 });
 const customLogger = require("./custom-logger");
 
-const otherIP = "http://" + process.env.otherIP +":"
-const myIP = "http://" + process.env.HOST +":"
+
 app.get("/",(req,res)=>{
     res.sendStatus(200)
 })
+
+const otherIP = "http://" + process.env.otherIP +":"
+const myIP = "http://" + process.env.HOST +":"
+
 
 app.post("/purchase/:itemnumber",async(req,res)=>{
 
@@ -29,7 +36,7 @@ app.post("/purchase/:itemnumber",async(req,res)=>{
     customLogger.myLog("new order to buy item: " + itemNumber)
    
     
-    axios.get(myIP+"4000"+'/books/item',{headers:{"booknumber":itemNumber}})
+    axios.get(otherIP+"4000"+'/books/item',{headers:{"booknumber":itemNumber}})
         .then((ress)=> {
             customLogger.myLog("item data is: " + JSON.stringify(ress.data))
             let itemData = ress.data
@@ -50,11 +57,14 @@ app.post("/purchase/:itemnumber",async(req,res)=>{
                 {
                     axios.put(myIP+"4000"+'/books/update/stock',data,{headers:{"opration":"decrease","booknumber":itemNumber,"amount":1}})
                     .then(async(resp)=>{
+                        axios.put(otherIP+"4000"+'/books/update/stock',data,{headers:{"opration":"decrease","itemnumber":itemNumber,"amount":1}}).then(async(resss11)=>{
+
                             customLogger.myLog("update the stock of the item")
                             let result = await knex("orders").insert({"date":new Date(),"itemNumber":itemNumber})
                             customLogger.myLog("result of update: " + resp.data)
                             res.sendStatus(200)
                         
+                        })
              
                     })
                 }
