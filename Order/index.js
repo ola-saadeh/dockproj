@@ -1,14 +1,12 @@
 const express = require('express');
-const path = require("path")
-
 const app = express() ;
+const path = require("path")
+const cors = require('cors');
+require('dotenv').config()
 const axios = require("axios")
 
-const cors = require('cors');
 app.use(cors());
 app.use(express.json());
-require('dotenv').config()
-
 
 const knex = require("knex")({
     client: "sqlite",
@@ -19,14 +17,18 @@ const knex = require("knex")({
 });
 const customLogger = require("./custom-logger");
 
-
-app.get("/",(req,res)=>{
-    res.sendStatus(200)
-})
-
 const otherIP = "http://" + process.env.otherIP +":"
 const myIP = "http://" + process.env.HOST +":"
 
+
+
+console.log("otherIP:", otherIP);
+console.log("myIP:", myIP);
+console.log("process.env.HOST:", process.env.HOST);
+console.log("process.env.otherIP:", process.env.otherIP);
+app.get("/",(req,res)=>{
+    res.sendStatus(200)
+})
 
 app.post("/purchase/:itemnumber",async(req,res)=>{
 
@@ -57,7 +59,7 @@ app.post("/purchase/:itemnumber",async(req,res)=>{
                 {
                     axios.put(myIP+"4000"+'/books/update/stock',data,{headers:{"opration":"decrease","booknumber":itemNumber,"amount":1}})
                     .then(async(resp)=>{
-                        axios.put(otherIP+"4000"+'/books/update/stock',data,{headers:{"opration":"decrease","itemnumber":itemNumber,"amount":1}}).then(async(resss11)=>{
+                        axios.put(otherIP+"4000"+'/books/update/stock',data,{headers:{"opration":"decrease","booknumber":itemNumber,"amount":1}}).then(async(ress111)=>{
 
                             customLogger.myLog("update the stock of the item")
                             let result = await knex("orders").insert({"date":new Date(),"itemNumber":itemNumber})
@@ -65,7 +67,6 @@ app.post("/purchase/:itemnumber",async(req,res)=>{
                             res.sendStatus(200)
                         
                         })
-             
                     })
                 }
             

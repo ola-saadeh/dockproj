@@ -3,16 +3,15 @@ const path = require("path")
 const cors = require('cors');
 const app = express() ;
 const axios = require("axios");
+require('dotenv').config();
 
 // Replicated servers
 
 const cat_IP = ["http://" + process.env.First +":4000","http://" + process.env.Second +":4000"]
-const oreder_IP = ["http://" + process.env.First +":5000","http://" + process.env.Second +":5000"]
+const order_IP = ["http://" + process.env.First +":5000","http://" + process.env.Second +":5000"]
 
  
-let catlogIP = "http://localhost:4000";
-let orderIP = "http://localhost:5000";
-console.log(process.env.HOST)
+console.log(process.env.PORT)
  
 
 // Load balancing algorithm (Round Robin)
@@ -107,11 +106,11 @@ app.post("/purchase/:itemnumber",async(req,res)=>{
     let itemNumber = req.params.itemnumber
    
     customLogger.myLog("Start a purchase order for the book with number:  " + itemNumber)
-    customLogger.myLog("Order processing on the server:    " + oreder_IP[orderServerIndex] )
-    axios.post(oreder_IP[orderServerIndex]+'/purchase/'+itemNumber)
+    customLogger.myLog("Order processing on the server:    " + order_IP[orderServerIndex] )
+    axios.post(order_IP[orderServerIndex]+'/purchase/'+itemNumber)
         .then((ress)=> {
             collection.clear();
-            orderServerIndex = (orderServerIndex + 1) % oreder_IP.length;
+            orderServerIndex = (orderServerIndex + 1) % order_IP.length;
 
             customLogger.myLog("Successful payment for the selected item.")
            res.send(ress.data)
@@ -124,5 +123,6 @@ app.post("/purchase/:itemnumber",async(req,res)=>{
 })
 
 app.listen(process.env.PORT, ()=>{
+    
     customLogger.myLog(`server is running on port ${process.env.PORT}`);
-  });
+  }); 

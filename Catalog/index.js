@@ -22,6 +22,8 @@ app.get("/", (req, res) => {
 app.get("/books/subject", async (req, res) => {
     try {
         let subject = req.headers["subject"];
+        const ip = req.connection.remoteAddress;
+        console.log(ip);
         console.log("Searching for books with subject: " + subject);
         customLogger.myLog("Searching for books with subject: " + subject);
         let result = await knex("books").select().where("topic", subject);
